@@ -1,0 +1,88 @@
+.scoreboard-game
+  position: relative
+  display: inline-block
+  width: 300px
+  padding: 10px
+  margin: 2px
+  box-sizing: border-box
+  box-shadow: inset 1px 1px 5px rgba(0,0,0,0.6), inset 0 0 2px rgba(0,0,0,0.25), inset -1px -1px 1px rgba(255,255,255,0.3), -1px -1px 1px rgba(255,255,255,0.1)
+  transition: background-color 0.2s linear
+  font-family: 'Ubuntu Mono', sans-serif
+  &:hover
+    background-color: rgba(255,255,255,0.075)
+  .inning
+    text-transform: uppercase
+  .away div,
+  .home div
+    display: inline-block
+    width: 30px
+    padding: 4px
+    text-align: center
+  .away div:first-child,
+  .home div:first-child
+    width: 40px
+    text-align: left
+
+  .bases
+    width: 35px
+    height: 35px
+    position: absolute
+    top: 25px
+    right: 30px
+    transform: rotate(-45deg)
+    span
+      position: absolute
+      display: block
+      width: 14px
+      height: 14px
+      background-color: rgba(0, 0, 0, 0.15)
+      box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255,255,255,0.25)
+      transition: background-color 0.2s linear
+      &.hasrunner
+        background:rgb(224, 214, 98)
+      &.first
+        bottom: 0
+        right: 0
+      &.second
+        top: 0
+        right: 0
+      &.third
+        top: 0
+        left: 0
+  .outs
+    position: absolute
+    right: 18px
+    bottom: 15px
+    width: 60px
+    height: 20px
+    text-align: center
+    span
+      display: inline-block
+      width: 12px
+      height: 12px
+      background-color: transparent
+      border-radius: 6px; margin: 0 5px 0 0
+      box-shadow: inset -2px -2px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 0px rgba(255, 255, 255, 0.40)
+      transition: background-color 0.2s linear, box-shadow 0.3s linear
+      &:last-child
+        margin-right: 0
+    &.one span:first-child,
+    &.two span:not(:last-child),
+    &.three span
+      background-color: rgba(253,5,5,1)
+      box-shadow: inset -2px -2px 2px rgba(0, 0, 0, 0.25), inset 1px 1px 3px rgba(255, 255, 255, 0.70), 0 0 5px 2px rgba(226, 47, 47, 0.75)
+
+  .score
+    td
+      border: 2px solid #025037
+      min-width: 23px
+      height: 23px
+      padding: 5px
+      text-align: center
+      box-shadow: inset 1px 1px 5px rgba(0,0,0,0.6), inset 0 0 2px rgba(0,0,0,0.25), inset -1px -1px 1px rgba(255,255,255,0.3), -1px -1px 1px rgba(255,255,255,0.1)
+
+
+// .game .inning-half::after { content:""; display:block; margin:0 auto; width:0; height:0; border:8px solid transparent; }
+//
+// .game .inning-half.top::after { border-bottom-color:#fff; margin-top:-8px; }
+// .game .inning-half.bottom::after { border-top-color:#fff; margin-top:5px; }

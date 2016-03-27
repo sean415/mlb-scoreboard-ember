@@ -1,0 +1,6 @@
+{{games-nav-bar action="changeDay" currentDate=currentDate}}
+<div class="games">
+  {{#each model as |game|}}
+    {{scoreboard-game model=game}}
+  {{/each}}
+</div>

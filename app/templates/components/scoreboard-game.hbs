@@ -1,0 +1,28 @@
+<table class="score">
+  <tbody>
+    <tr class="away">
+      <td class="inning">{{inningOrStatus}}</td>
+      <td class="team">{{model.away_name_abbrev}}</td>
+      <td class="score">{{model.away_team_runs}}</td>
+      <td class="hits">{{model.away_team_hits}}</td>
+      <td class="errors">{{model.away_team_errors}}</td>
+    </tr>
+    <tr class="home">
+      <td class="inning-half bottom"></td>
+      <td class="team">{{model.home_name_abbrev}}</td>
+      <td class="score">{{model.home_team_runs}}</td>
+      <td class="hits">{{model.home_team_hits}}</td>
+      <td class="errors">{{model.home_team_errors}}</td>
+    </tr>
+  </tbody>
+</table>
+<div class="bases">
+  <span class="first {{if hasRunnerOnFirst 'hasrunner'}}"></span>
+  <span class="second {{if hasRunnerOnSecond 'hasrunner'}}"></span>
+  <span class="third {{if hasRunnerOnThird 'hasrunner'}}"></span>
+</div>
+<section class="outs {{numberOfOuts}}">
+  <span></span>
+  <span></span>
+  <span></span>
+</section>
