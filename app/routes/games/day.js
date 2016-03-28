@@ -19,6 +19,9 @@ export default Ember.Route.extend({
   actions: {
     changeDay(day) {
       this.transitionTo('games.day', moment(day).format('YYYY-MM-DD'));
+    },
+    refreshData() {
+      this.refresh();
     }
   }
 

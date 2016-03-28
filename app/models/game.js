@@ -88,5 +88,9 @@ export default DS.Model.extend({
   "home_preview_link": DS.attr(),
   "time_zone_hm_lg": DS.attr(),
   "away_ampm": DS.attr(),
-  "away_division": DS.attr()
+  "away_division": DS.attr(),
+  "runner_on_1b": DS.attr(),
+  "runner_on_2b": DS.attr(),
+  "runner_on_3b": DS.attr()
+
 });

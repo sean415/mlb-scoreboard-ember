@@ -39,7 +39,7 @@
       box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255,255,255,0.25)
       transition: background-color 0.2s linear
       &.hasrunner
-        background:rgb(224, 214, 98)
+        background: rgb(224, 214, 98)
       &.first
         bottom: 0
         right: 0
@@ -80,9 +80,19 @@
       padding: 5px
       text-align: center
       box-shadow: inset 1px 1px 5px rgba(0,0,0,0.6), inset 0 0 2px rgba(0,0,0,0.25), inset -1px -1px 1px rgba(255,255,255,0.3), -1px -1px 1px rgba(255,255,255,0.1)
-
-
-// .game .inning-half::after { content:""; display:block; margin:0 auto; width:0; height:0; border:8px solid transparent; }
-//
-// .game .inning-half.top::after { border-bottom-color:#fff; margin-top:-8px; }
-// .game .inning-half.bottom::after { border-top-color:#fff; margin-top:5px; }
+  .inning-half
+    &::after
+      content: ""
+      display: block
+      margin: 0 auto
+      width: 0
+      height: 0
+      border: 8px solid transparent
+    &.top
+      &::after
+        border-bottom-color: #fff
+        margin-top: -8px
+    &.bottom
+      &::after
+        border-top-color: #fff
+        margin-top: 5px
