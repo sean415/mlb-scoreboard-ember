@@ -8,8 +8,9 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('games', { resetNamespace: true}, function () {
     this.route('index', { path: '/' });
-    this.route('day', { path: ':date' })
-    this.route('game', {path: ':date/:gameid' });
+    this.route('day', { path: '/:date' }, function() {
+      this.route('game', { path: '/:gameid' });
+    });
   });
 });
 

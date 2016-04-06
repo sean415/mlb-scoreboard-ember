@@ -9,7 +9,6 @@ const GamesForDateRoute = Ember.Route.extend({
   afterModel (model, transition) {
     this.controllerFor('games').set('currentDate', transition.params.games.date);
   }
-
 });
 
 export default GamesForDateRoute;

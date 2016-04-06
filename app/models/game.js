@@ -89,8 +89,7 @@ export default DS.Model.extend({
   "time_zone_hm_lg": DS.attr(),
   "away_ampm": DS.attr(),
   "away_division": DS.attr(),
-  "runner_on_1b": DS.attr(),
-  "runner_on_2b": DS.attr(),
-  "runner_on_3b": DS.attr()
-
+  "runner_on_1b": DS.attr({ defaultValue: null }),
+  "runner_on_2b": DS.attr({ defaultValue: null }),
+  "runner_on_3b": DS.attr({ defaultValue: null })
 });

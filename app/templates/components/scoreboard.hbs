@@ -1,5 +1,5 @@
 {{#each model as |game|}}
-  {{scoreboard-game model=game}}
+  {{scoreboard-game model=game action="showGameDetails"}}
 {{else}}
-  <p class="no-games">No games</p>
+  <p class="no-games">No Games Scheduled</p>
 {{/each}}

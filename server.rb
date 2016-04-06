@@ -42,8 +42,24 @@ get '/boxscore/:year/:month/:day/:gid' do
   host = 'gd2.mlb.com'
   base_path = 'components/game/mlb'
   filename = 'boxscore.json'
+  gid = "gid_#{params[:year]}_#{params[:month]}_#{params[:day]}_#{params[:gid].gsub('-', '_')}"
 
-  Net::HTTP.get(URI.parse("http://#{host}/#{base_path}/year_#{params[:year]}/month_#{params[:month]}/day_#{params[:day]}/gid_#{params[:gid]}/#{filename}"))
+  url = URI.parse("http://#{host}/#{base_path}/year_#{params[:year]}/month_#{params[:month]}/day_#{params[:day]}/#{gid}/#{filename}")
+  puts "getting #{url}"
+
+  Net::HTTP.get(URI.parse("http://#{host}/#{base_path}/year_#{params[:year]}/month_#{params[:month]}/day_#{params[:day]}/#{gid}/#{filename}"))
+end
+
+get '/linescore/:year/:month/:day/:gid' do
+  host = 'gd2.mlb.com'
+  base_path = 'components/game/mlb'
+  filename = 'linescore.json'
+  gid = "gid_#{params[:year]}_#{params[:month]}_#{params[:day]}_#{params[:gid].gsub('-', '_')}"
+
+  url = URI.parse("http://#{host}/#{base_path}/year_#{params[:year]}/month_#{params[:month]}/day_#{params[:day]}/#{gid}/#{filename}")
+  puts "getting #{url}"
+
+  Net::HTTP.get(URI.parse("http://#{host}/#{base_path}/year_#{params[:year]}/month_#{params[:month]}/day_#{params[:day]}/#{gid}/#{filename}"))
 end
 
 get '/preview/:year/:month/:day/:gid' do
